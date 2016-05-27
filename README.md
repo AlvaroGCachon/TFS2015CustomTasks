@@ -10,3 +10,4 @@ Use the tfx extension to compile it after cloning this repository in your drive.
     tfx extension create --manifest-globs vss-extension.json
 
 ## Installing to your VSOnline or On-Premises TFS 2015
+Upload the compiled .VSIX to your local TFS2015/VSO gallery and install it on the collection/s of your choice.
