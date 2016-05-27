@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "alvarogcachon-custom-build-tasks",
     "name": "Alvaro G. Cachon Build Tools",
-    "version": "10.0",
+    "version": "0.1.1",
     "publisher": "alvarogcachon",
     "targets": [
         {
