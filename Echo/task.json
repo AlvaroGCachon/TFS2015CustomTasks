@@ -1,0 +1,36 @@
+{
+  "id": "23c41920-228a-11e6-8c6b-690f808854b9",
+  "name": "Echo",
+  "friendlyName": "Echo",
+  "description": "Creates a vNext log message with the contents of a variable",
+  "author": "https://github.com/AlvaroGCachon",
+  "helpMarkDown": "Just an echo.",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "Echo $(message)",
+  "inputs": [
+    {
+      "name": "echovar",
+      "type": "string",
+      "label": "Variable",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Enter the message to log."
+    }   
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "echo.ps1"
+    }
+  }
+}

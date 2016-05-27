@@ -1,0 +1,49 @@
+{
+    "manifestVersion": 1,
+    "id": "alvarogcachon-custom-build-tasks",
+    "name": "Alvaro G. Cachon Build Tools",
+    "version": "0.1.1",
+    "publisher": "alvarogcachon",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Custom tools developed by https://github.com/AlvaroGCachon.",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "icon.png"
+    },
+    "files": [
+        {
+            "path": "GetAssembly"
+        },
+        {
+            "path": "Echo"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-task-1",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "GetAssembly"
+            }
+        },
+        {
+            "id": "custom-build-task-2",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Echo"
+            }
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "23c41920-228a-11e6-8c6b-690f808854b8",
+  "name": "GetAssembly",
+  "friendlyName": "GetAssembly",
+  "description": "Loads version from assembly file",
+  "author": "https://github.com/AlvaroGCachon",
+  "helpMarkDown": "Simple tool to read semantic versioning from an AssemblyInfo file",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "GetAssembly $(message)",
+  "inputs": [
+    {
+      "name": "assemblyfile",
+      "type": "filePath",
+      "label": "Target AssemblyInfo",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Path of the file to read. Should be fully qualified path or relative to the default working directory."
+    },
+    {
+      "name": "section",
+      "type": "pickList",
+      "label": "Version Information Section: ",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Section from which reading the semantic versioning.",        
+      "options": {
+          "AssemblyVersion": "AssemblyVersion",
+          "AssemblyFileVersion": "AssemblyFileVersion"
+        }
+    },
+    {
+      "name": "taskvar",
+      "type": "string",
+      "label": "Task variable",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Loads the semantic versioning found on the target AssemblyInfo in the previous input into this variable."
+    }   
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "getassembly.ps1"
+    }
+  }
+}
